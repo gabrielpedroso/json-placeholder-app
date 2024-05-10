@@ -16,6 +16,10 @@
   }
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,6 +28,17 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 30%;
+  padding: 1.5rem 0rem;
+  border-left: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: white;
 }
 
 @layer utilities {

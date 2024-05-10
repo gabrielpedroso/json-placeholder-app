@@ -1,5 +1,5 @@
-import PostCard from "./components/PostCard";
-import CommentCard from "./components/CommentCard";
+import PostCard from "./components/PostCard/PostCard";
+import CommentCard from "./components/CommentCard/CommentCard";
 
 interface Post {
   userId: number;
@@ -27,18 +27,23 @@ export default async function Home () {
 
   return (
     <main>
-      <PostCard 
-        title={socialNetwork.post.title} 
-        body={socialNetwork.post.body } 
-      />
-      {socialNetwork.comments.map(
-        comment => 
-          <CommentCard 
-            key={comment.id}
-            name={comment.name}
-            email={comment.email}
-            body={comment.body} />
-      )}
+      <h1 className="text-xl font-bold px-4">Post</h1>
+      <div className="p-4 border-b">
+        <PostCard 
+          title={socialNetwork.post.title} 
+          body={socialNetwork.post.body } 
+        />
+      </div>
+      <div className="my-12">
+        {socialNetwork.comments.map(
+          comment => 
+            <CommentCard
+              key={comment.id}
+              name={comment.name}
+              email={comment.email}
+              body={comment.body} />
+        )}
+      </div>
     </main>
   );
 }
