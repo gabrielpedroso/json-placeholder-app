@@ -41,6 +41,19 @@ main {
   border-color: white;
 }
 
+@media (max-width: 900px) { 
+  main {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    border: none;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
