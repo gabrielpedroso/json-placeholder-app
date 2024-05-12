@@ -1,4 +1,5 @@
 'use client';
+import styles from './SearchBar.module.css';
 import { useState } from "react";
 
 export default function SearchBar(props: { onSearch: (id: number) => void }) {
@@ -15,16 +16,14 @@ export default function SearchBar(props: { onSearch: (id: number) => void }) {
 
   return (
     <>
-      <form className="flex gap-4 justify-center" onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <input 
+          className={styles.input}
           type="number"
           value={id}
           onChange={(e) => setId(e.target.value)}
-          className="border border-gray-300 px-2 py-1 rounded-md text-black w-full"
         />
-        <button type="submit">
-          Pesquisar
-        </button>
+        <button type="submit">Pesquisar</button>
       </form>
     </>
   );

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.container_head {
+  display: flex;
+  gap: .5rem;
+}
+
+.container_head_title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.container_body {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}

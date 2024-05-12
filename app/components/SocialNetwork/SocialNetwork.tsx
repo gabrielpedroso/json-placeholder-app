@@ -42,35 +42,34 @@ export default function SocialNetwork() {
 
   return (
     <>
-      <div>
-        <div className="mx-4 mb-4">
-          <SearchBar onSearch={fetchPost} />
-        </div>
+      <div className="flex flex-col gap-4 mx-4">
+        <SearchBar onSearch={fetchPost} />
         <Title text="Post"/>
-
-        {socialNetwork?.post && (
-          <>
-            <PostCard 
-              title={socialNetwork.post.title}
-              body={socialNetwork.post.body}
-            />
-            {socialNetwork.comments.map(
-              comment => 
-                <CommentCard
-                  key={comment.id}
-                  name={comment.name}
-                  email={comment.email}
-                  body={comment.body} />
-            )}
-          </>
-        )}
-
-        {!socialNetwork?.post && (
-          <>
-            <span>Post não encontrado.</span>
-          </>
-        )}
       </div>
+      
+      {socialNetwork?.post && (
+        <>
+          <PostCard 
+            title={socialNetwork.post.title}
+            body={socialNetwork.post.body}
+          />
+
+          {socialNetwork.comments.map(
+            comment => 
+              <CommentCard
+                key={comment.id}
+                name={comment.name}
+                email={comment.email}
+                body={comment.body} />
+          )}
+        </>
+      )}
+
+      {!socialNetwork?.post && (
+        <>
+          <span className="self-center mt-16">Post não encontrado.</span>
+        </>
+      )}
     </>
   )
 }
