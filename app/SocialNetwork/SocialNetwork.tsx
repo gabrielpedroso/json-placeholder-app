@@ -35,7 +35,7 @@ export default function SocialNetwork() {
   }, []);
 
   async function fetchPost(id: number = 1) {
-    const response = await fetch(`http://localhost:3001/post/${id}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_NODE_API}/post/${id}`);
     const data: SocialNetwork = await response.json();
     setSocialNetWork(data);
   }
