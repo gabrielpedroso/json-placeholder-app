@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useState } from "react";
 
-import CommentCard from "../CommentCard/CommentCard";
-import PostCard from "../PostCard/PostCard";
-import Title from "../Title/Title";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../components/SearchBar/SearchBar";
+import Title from "../components/Title/Title";
+import Post from "../components/Post/Post";
+import Comment from "../components/Comment/Comment";
 
 interface Post {
   userId: number;
@@ -49,14 +49,14 @@ export default function SocialNetwork() {
       
       {socialNetwork?.post && (
         <>
-          <PostCard 
+          <Post
             title={socialNetwork.post.title}
             body={socialNetwork.post.body}
           />
 
           {socialNetwork.comments.map(
             comment => 
-              <CommentCard
+              <Comment
                 key={comment.id}
                 name={comment.name}
                 email={comment.email}

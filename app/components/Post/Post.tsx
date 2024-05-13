@@ -1,7 +1,7 @@
 import Image from "next/image";
-import style from './PostCard.module.css';
+import style from './Post.module.css';
 
-const PostCard = (props: { title: string, body: string, profileImg?: string }) => {
+const Post = (props: { title: string, body: string, profileImg?: string }) => {
   return (
     <>
       <div className={style.container}>
@@ -20,4 +20,4 @@ const PostCard = (props: { title: string, body: string, profileImg?: string }) =
   );
 }
 
-export default PostCard;
+export default Post;

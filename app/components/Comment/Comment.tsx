@@ -1,6 +1,6 @@
-import style from './CommentCard.module.css';
+import style from './Comment.module.css';
 
-const CommentCard = (props: { name: string, email: string, body: string }) => {
+const Comment = (props: { name: string, email: string, body: string }) => {
   return (
     <>
       <div className={style.container}>
@@ -14,4 +14,4 @@ const CommentCard = (props: { name: string, email: string, body: string }) => {
   );
 }
 
-export default CommentCard;
+export default Comment;

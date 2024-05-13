@@ -1,4 +1,4 @@
-import SocialNetwork from "./components/SocialNetwork/SocialNetwork";
+import SocialNetwork from "./SocialNetwork/SocialNetwork";
 
 export default async function Home() {
   return (
